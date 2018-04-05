@@ -25,10 +25,10 @@ public class ThreadPoolTest {
 
 		int count = (int) Math.sqrt(total);
 
-		for (int i = 0; i <= count; i++) {
+		for (int i = 0; i < count; i++) {
 			int x = i * count;
 			tp.addTask(() -> {
-				for (int j = 0; j <= count; j++) {
+				for (int j = 0; j < count; j++) {
 					chars[x + j] = Character.toUpperCase(chars[x + j]);
 				}
 			});
